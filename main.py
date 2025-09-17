@@ -5,6 +5,7 @@ from network.node import Node
 from data.blockchain import Blockchain
 from consensus.pow import proof_of_work
 from transaction.utxo import Transaction, TransactionInput, TransactionOutput
+from transaction.utxo import TOTAL_SUPPLY
 
 if __name__ == "__main__":
     # Start network node
@@ -20,3 +21,4 @@ if __name__ == "__main__":
     blockchain.add_block([tx], nonce)
     print(f"Block added with hash: {block_hash}")
     print(f"Blockchain length: {len(blockchain.chain)}")
+    print(f"Total supply: {TOTAL_SUPPLY}")
